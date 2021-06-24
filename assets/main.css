@@ -1,43 +1,77 @@
             .header {
-            height: 120px;
-            background-image: linear-gradient(0, #fe6433, #f53e2d);
-        }
-        
-        .header__navbar {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .header__navbar-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .header__navbar-item {
-            margin: 0 8px;
-        }
-        
-        .header__navbar-item,
-        .header__navbar-itemlink {
-            display: inline-block;
-            font-size: 1.4rem;
-            color: var(--white-color);
-            /* thêm biến vào */
-            text-decoration: none;
-            /* bỏ đi rạch chân */
-            font-weight: 300;
-        }
-        
-        .header__navbar-item--strong {
-            font-weight: 400;
-        }
-        
-        .header__navbar-item--separate::after {
-            content: "";
-            display: block;
-            position: absolute;
-            border-left: 100px solid #FB9086;
-            height: 14px;
-            right: -9px;
-            top: 50%;
-            transform: translateY(-50%);
+                height: 120px;
+                background-image: linear-gradient(0, #fe6433, #f53e2d);
+            }
+            
+            .header__navbar {
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .header__navbar-list {
+                list-style: none;
+                padding-left: 0;
+                margin: 4px 0px 0px 0px;
+            }
+            
+            .header__navbar-item {
+                margin: 0 8px;
+                position: relative;
+                min-height: 26px;
+                display: flex;
+            }
+            
+            .header__navbar-item,
+            .header__navbar-itemlink {
+                display: inline-block;
+                font-size: 1.4rem;
+                color: var(--white-color);
+                /* thêm biến vào */
+                text-decoration: none;
+                /* bỏ đi rạch chân */
+                font-weight: 300;
+            }
+            
+            .header__navbar-item,
+            .header__navbar-itemlink,
+            .header__navbar-icon--link {
+                display: inline-flex;
+                align-items: center;
+            }
+            
+            .header__navbar-item:hover,
+            .header__navbar-icon--link:hover,
+            .header__navbar-itemlink:hover {
+                cursor: pointer;
+                color: rgba(255, 255, 255, 0.7);
+            }
+            
+            .header__navbar-item--strong {
+                font-weight: 400;
+            }
+            
+            .header__navbar-item--separate::after {
+                content: "";
+                display: block;
+                position: absolute;
+                border-left: 1px solid #FB9086;
+                height: 14px;
+                right: -9px;
+                top: 50%;
+                transform: translateY(-80%);
+            }
+            
+            .header__navbar-icon--link {
+                color: var(--white-color);
+                text-decoration: none;
+            }
+            
+            .header__navbar-icon {
+                font-size: 1.5rem;
+                margin: 0 4px;
+            }
+            
+            .header__navbar-title--no-pointer {
+                cursor: text;
+                color: var(--white-color);
+            }
