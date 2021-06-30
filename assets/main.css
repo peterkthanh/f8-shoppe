@@ -126,3 +126,86 @@
             .header__qr-download-img {
                 height: 14px;
             }
+            
+            .header__notify {
+                position: absolute;
+                top: 118%;
+                width: 404px;
+                background-color: var(--white-color);
+                right: 0;
+                border: 1px solid #D3D3D3;
+            }
+            
+            .header__notify--header {
+                height: 40px;
+                background-color: var(--white-color);
+            }
+            
+            .header__notify--header h3 {
+                color: #999;
+                margin: 0;
+                font-weight: 400;
+                font-size: 1.2em;
+                line-height: 40px;
+                margin: 0 0 0 12px;
+            }
+            
+            .header__notify--list {
+                padding-left: 0;
+            }
+            
+            .header__notify--item {}
+            
+            .header__notify--item:hover {
+                background-color: #eaeaf4;
+            }
+            
+            .header__notify--item--viewed {
+                background-color: rgba(238, 77, 45, 0.1);
+            }
+            
+            .header__notify--link {
+                display: flex;
+                width: 100%;
+                padding: 12px;
+                text-decoration: none;
+                background-color: rgba(238, 75, 43, 0.1);
+            }
+            
+            .header__notify--img {
+                width: 48px;
+                object-fit: contain;
+            }
+            
+            .header__nofify--info {}
+            
+            .header__nofify--name {
+                display: block;
+                color: var(--black-color);
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+                font-weight: 400;
+            }
+            
+            .header__nofify--descriotion {
+                display: block;
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+                color: #756F6E;
+                margin-top: 4px;
+            }
+            
+            .header__notify--footer {
+                display: block;
+                text-align: center;
+                padding: 8px 8px;
+            }
+            
+            .header__notify--footer-btn {
+                text-decoration: none;
+                color: var(--text-color);
+                padding: 10px 32px;
+                margin: auto;
+                font-size: 1.4rem;
+                font-weight: 400;
+            }
