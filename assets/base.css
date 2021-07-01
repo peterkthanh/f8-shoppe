@@ -43,3 +43,8 @@ html {
         opacity: 1;
     }
 }
+
+
+/* Animation notify */
+
+@keyframes headernotify {}

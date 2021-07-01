@@ -36,6 +36,10 @@
                 display: block;
             }
             
+            .header__navbar-item--has-notify:hover .header__notify {
+                display: block;
+            }
+            
             .header__navbar-item,
             .header__navbar-itemlink,
             .header__navbar-icon--link {
@@ -134,6 +138,19 @@
                 background-color: var(--white-color);
                 right: 0;
                 border: 1px solid #D3D3D3;
+                cursor: default;
+                transform-origin: calc(100% - 20px) top;
+                animation: headernotifyGrowth ease-in 0.25s;
+                display: none;
+            }
+            
+            @keyframes headernotifyGrowth {
+                from {
+                    transform: scale(0);
+                }
+                to {
+                    transform: scale(1);
+                }
             }
             
             .header__notify--header {
@@ -148,6 +165,7 @@
                 font-size: 1.2em;
                 line-height: 40px;
                 margin: 0 0 0 12px;
+                user-select: none;
             }
             
             .header__notify--list {
@@ -175,6 +193,7 @@
             .header__notify--img {
                 width: 48px;
                 object-fit: contain;
+                margin-right: 10px;
             }
             
             .header__nofify--info {}
@@ -185,6 +204,7 @@
                 font-size: 1.4rem;
                 line-height: 1.8rem;
                 font-weight: 400;
+                line-height: 1.8 rem;
             }
             
             .header__nofify--descriotion {
@@ -196,15 +216,16 @@
             }
             
             .header__notify--footer {
-                display: block;
-                text-align: center;
-                padding: 8px 8px;
+                display: flex;
+                margin: auto;
             }
             
             .header__notify--footer-btn {
                 text-decoration: none;
                 color: var(--text-color);
-                padding: 10px 32px;
+                width: 100%;
+                text-align: center;
+                padding: 8px 0;
                 margin: auto;
                 font-size: 1.4rem;
                 font-weight: 400;
