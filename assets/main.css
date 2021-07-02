@@ -140,15 +140,49 @@
                 border: 1px solid #D3D3D3;
                 cursor: default;
                 transform-origin: calc(100% - 20px) top;
+                /* webkit chrome  */
+                -webkit-animation: headernotifyGrowth ease-in 0.25s;
+                /* webkit edge */
+                -ms-animation: headernotifyGrowth ease-in 0.25s;
+                /* webkit  opera*/
+                -o-animation: headernotifyGrowth ease-in 0.25s;
+                /* webkit fox */
+                -moz-animation: headernotifyGrowth ease-in 0.25s;
                 animation: headernotifyGrowth ease-in 0.25s;
+                /* caniuse dán thuộc tính vào để biết nhưng 
+                thuộc tính có thể sử dụng cho trình duyệt web */
+                /* khai báo tối uư chuyển động cho 2 thuộc tính hơn */
+                will-change: opacity, transform;
                 display: none;
+            }
+            
+            .header__notify::before {
+                content: "";
+                position: absolute;
+                right: 3px;
+                top: -29px;
+                border-width: 20px 27px;
+                border-style: solid;
+                border-color: transparent transparent var(--white-color) transparent;
+            }
+            
+            .header__notify::after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 90px;
+                height: 20px;
+                right: 0;
+                top: -10px;
             }
             
             @keyframes headernotifyGrowth {
                 from {
+                    opacity: 0;
                     transform: scale(0);
                 }
                 to {
+                    opacity: 1;
                     transform: scale(1);
                 }
             }
