@@ -3,6 +3,7 @@
     --black-color: #000;
     --text-color: #333;
     --primary-color: #ee4b2b;
+    --boder-color: #dbdbdb
 }
 
 * {
@@ -71,4 +72,44 @@ html {
     margin: auto;
     position: relative;
     z-index: 1;
+}
+
+
+/* Button  style */
+
+.btn {
+    min-width: 142px;
+    height: 34px;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.btn.btn--primary {
+    color: var(--white-color);
+    background: var(--primary-color);
+    text-decoration: none;
+}
+
+.btn.btn--disable {
+    color: #666;
+    cursor: default;
+    background-color: #999;
+}
+
+.btn.btn--size-s {
+    height: 32px;
+    font-size: 12px;
 }
