@@ -16,7 +16,8 @@
 
 html {
     /*HACK*/
-    font-size: 65.5%;
+    /*  font-size: 65.5%; */
+    font-size: 60.5%;
     line-height: 1.6rem;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -203,6 +204,7 @@ html {
     padding: 10px 16px 5px 16px;
     list-style: none;
     display: none;
+    z-index: 2;
 }
 
 .select-input__link {
@@ -216,4 +218,47 @@ html {
 
 .select-input__link:hover {
     color: var(--primary-color);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pagination-item {
+    margin: 0 12px;
+}
+
+.pagination-item--active .pagination-item__link {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    background-color: #ed5c3f;
+}
+
+.pagination-item__link {
+    --height: 30px;
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #939399;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+    border-radius: 2px;
+}
+
+.pagination-item__icon {
+    font-style: normal;
+}
+
+.footer {
+    padding-top: 16px;
+    border-top: 4px solid var(--primary-color);
 }
